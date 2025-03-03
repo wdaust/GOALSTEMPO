@@ -34,7 +34,7 @@ export async function signInWithGoogle() {
       redirectTo:
         window.location.hostname === "localhost"
           ? "http://localhost:3000"
-          : "https://truthgoals.io/",
+          : "https://truthgoals.io",
     },
   });
 
@@ -53,7 +53,7 @@ export async function signUp(email: string, password: string, name: string) {
       emailRedirectTo:
         window.location.hostname === "localhost"
           ? "http://localhost:3000/email-verified"
-          : "https://truthgoals.io/",
+          : "https://truthgoals.io/email-verified",
     },
   });
 
