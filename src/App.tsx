@@ -81,7 +81,6 @@ function App() {
             path="/app"
             element={user ? <Dashboard /> : <Navigate to="/app/auth" replace />}
           />
-          <Route path="/home" element={<LandingPage />} />
           <Route
             path="/habits"
             element={user ? <HabitsPage /> : <Navigate to="/auth" replace />}
@@ -127,8 +126,8 @@ function App() {
             }
           />
 
-          {/* Redirect root to /home to show the landing page */}
-          <Route path="/" element={<Navigate to="/home" replace />} />
+          {/* Redirect root to app */}
+          <Route path="/" element={<Navigate to="/app" replace />} />
 
           {/* For all other paths, don't render the React app */}
           <Route path="*" element={<Navigate to="/home" replace />} />
