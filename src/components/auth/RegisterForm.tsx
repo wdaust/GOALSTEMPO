@@ -72,7 +72,7 @@ const RegisterForm = ({ onSuccess, onLoginClick }: RegisterFormProps) => {
         <div className="flex flex-col items-center">
           <div className="flex items-center mb-2">
             <img
-              src="https://www.dropbox.com/scl/fi/f0zm1lf8nj2oyu4d18uck/truthgoals-logo-light2-2x.png?rlkey=1674dqzppcx47327lip5kcoe4&dl=1"
+              src="/images/truthgoals-logo-light2@2x.png"
               alt="Truthgoals"
               className="h-10 w-auto mr-2"
             />

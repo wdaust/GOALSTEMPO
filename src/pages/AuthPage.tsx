@@ -65,7 +65,7 @@ const AuthPage = () => {
         <div className="h-full flex flex-col justify-center items-center p-12 text-white">
           <div className="flex flex-col items-center mb-6">
             <img
-              src="https://www.dropbox.com/scl/fi/f0zm1lf8nj2oyu4d18uck/truthgoals-logo-light2-2x.png?rlkey=1674dqzppcx47327lip5kcoe4&dl=1"
+              src="/images/truthgoals-logo-light2@2x.png"
               alt="Truthgoals"
               className="h-16 w-auto mb-4"
             />
