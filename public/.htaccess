@@ -1,0 +1,12 @@
+# Don't rewrite requests for actual files or directories
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteRule ^privacy-policy\.html$ - [L]
+RewriteRule ^terms-of-service\.html$ - [L]
+RewriteRule ^test\.html$ - [L]
+
+# Rewrite all other requests to the React app's index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^app/ /index.html [L]
