@@ -11,6 +11,7 @@ import {
   Home,
   User,
   Settings,
+  Book,
 } from "lucide-react";
 
 interface SidebarItemProps {
@@ -89,6 +90,12 @@ const Sidebar = ({ className }: SidebarProps) => {
               label="Journal"
               href="/journal"
               active={pathname === "/journal"}
+            />
+            <SidebarItem
+              icon={<Book className="h-4 w-4" />}
+              label="Bible Reading"
+              href="/bible-reading"
+              active={pathname === "/bible-reading"}
             />
           </div>
         </div>
