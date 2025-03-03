@@ -9,6 +9,7 @@ import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage";
 import AuthPage from "./pages/AuthPage";
 import EmailVerifiedPage from "./pages/EmailVerifiedPage";
+import BibleReadingPage from "./pages/BibleReadingPage";
 import { getCurrentUser } from "./lib/auth";
 import routes from "tempo-routes";
 import { supabase } from "./lib/supabase";
@@ -56,7 +57,14 @@ function App() {
   }
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center min-h-screen bg-gray-50">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+          <span className="ml-3">Loading app...</span>
+        </div>
+      }
+    >
       <>
         <Routes>
           <Route path="/auth" element={<AuthPage />} />
@@ -90,6 +98,12 @@ function App() {
           <Route
             path="/settings"
             element={user ? <SettingsPage /> : <Navigate to="/auth" replace />}
+          />
+          <Route
+            path="/bible-reading"
+            element={
+              user ? <BibleReadingPage /> : <Navigate to="/auth" replace />
+            }
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

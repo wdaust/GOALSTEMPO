@@ -9,6 +9,7 @@ import {
   BookOpen,
   Calendar,
   BarChart3,
+  Book,
 } from "lucide-react";
 
 const MobileNav = () => {
@@ -32,6 +33,11 @@ const MobileNav = () => {
       icon: <BookOpen className="h-5 w-5" />,
       label: "Journal",
       href: "/journal",
+    },
+    {
+      icon: <Book className="h-5 w-5" />,
+      label: "Bible",
+      href: "/bible-reading",
     },
   ];
 

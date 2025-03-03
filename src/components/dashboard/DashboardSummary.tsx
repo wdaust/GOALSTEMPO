@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Progress } from "@/components/ui/progress";
-import { CheckCircle, Target, BookOpen, Calendar, Loader2 } from "lucide-react";
+import {
+  CheckCircle,
+  Target,
+  BookOpen,
+  Calendar,
+  Loader2,
+  BarChart,
+} from "lucide-react";
 import { getHabits } from "@/lib/api/habits";
 import { getGoals } from "@/lib/api/goals";
+import { getReadingStreak } from "@/lib/api/bible";
 
 interface DashboardSummaryProps {
   habitCount?: number;
@@ -19,6 +27,8 @@ const DashboardSummary = () => {
   const [activeGoals, setActiveGoals] = useState(0);
   const [goalCompletionRate, setGoalCompletionRate] = useState(0);
   const [streakDays, setStreakDays] = useState(0);
+  const [bibleStreakDays, setBibleStreakDays] = useState(0);
+  const [longestBibleStreak, setLongestBibleStreak] = useState(0);
   const [nextMeeting, setNextMeeting] = useState("Sunday, 10:00 AM");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -70,6 +80,11 @@ const DashboardSummary = () => {
               )
             : 0;
         setGoalCompletionRate(avgProgress);
+
+        // Fetch Bible reading streak data
+        const streakInfo = await getReadingStreak();
+        setBibleStreakDays(streakInfo.currentStreak);
+        setLongestBibleStreak(streakInfo.longestStreak);
 
         setLoading(false);
       } catch (err) {
@@ -138,18 +153,18 @@ const DashboardSummary = () => {
 
         <div className="bg-amber-50 p-4 rounded-lg">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-medium">Current Streak</h3>
-            <BookOpen className="h-5 w-5 text-amber-500" />
+            <h3 className="text-sm font-medium">Bible Reading Streak</h3>
+            <BarChart className="h-5 w-5 text-amber-500" />
           </div>
-          <div className="text-2xl font-bold mb-1">{streakDays} days</div>
-          <p className="text-sm text-muted-foreground">Bible reading</p>
-          <div className="mt-3 flex">
-            {Array.from({ length: 7 }).map((_, i) => (
-              <div
-                key={i}
-                className={`h-2 w-2 rounded-full mx-0.5 ${i < 5 ? "bg-amber-500" : "bg-gray-200"}`}
-              />
-            ))}
+          <div className="grid grid-cols-2 gap-2">
+            <div>
+              <p className="text-xs text-muted-foreground">Current</p>
+              <div className="text-xl font-bold">{bibleStreakDays} days</div>
+            </div>
+            <div>
+              <p className="text-xs text-muted-foreground">Longest</p>
+              <div className="text-xl font-bold">{longestBibleStreak} days</div>
+            </div>
           </div>
         </div>
 
