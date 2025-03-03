@@ -10,6 +10,7 @@ import SettingsPage from "./pages/SettingsPage";
 import AuthPage from "./pages/AuthPage";
 import EmailVerifiedPage from "./pages/EmailVerifiedPage";
 import BibleReadingPage from "./pages/BibleReadingPage";
+import LandingPage from "./components/LandingPage";
 import { getCurrentUser } from "./lib/auth";
 import routes from "tempo-routes";
 import { supabase } from "./lib/supabase";
@@ -18,6 +19,7 @@ function App() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
+  // First useEffect for auth check
   useEffect(() => {
     const checkAuth = async () => {
       try {
@@ -31,7 +33,10 @@ function App() {
     };
 
     checkAuth();
+  }, []);
 
+  // Second useEffect for auth listener
+  useEffect(() => {
     // Set up auth state listener
     const { data: authListener } = supabase.auth.onAuthStateChange(
       (event, session) => {
@@ -66,13 +71,17 @@ function App() {
       }
     >
       <>
+        {/* For Tempo routes */}
+        {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
+
         <Routes>
-          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/auth" element={<Navigate to="/app/auth" replace />} />
           <Route path="/email-verified" element={<EmailVerifiedPage />} />
           <Route
-            path="/"
-            element={user ? <Dashboard /> : <Navigate to="/auth" replace />}
+            path="/app"
+            element={user ? <Dashboard /> : <Navigate to="/app/auth" replace />}
           />
+          <Route path="/home" element={<LandingPage />} />
           <Route
             path="/habits"
             element={user ? <HabitsPage /> : <Navigate to="/auth" replace />}
@@ -105,9 +114,25 @@ function App() {
               user ? <BibleReadingPage /> : <Navigate to="/auth" replace />
             }
           />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* Removed duplicate /app route */}
+          <Route path="/app/auth" element={<AuthPage />} />
+          <Route
+            path="/app/*"
+            element={
+              user ? (
+                <Navigate to="/app" replace />
+              ) : (
+                <Navigate to="/app/auth" replace />
+              )
+            }
+          />
+
+          {/* Redirect root to /home to show the landing page */}
+          <Route path="/" element={<Navigate to="/home" replace />} />
+
+          {/* For all other paths, don't render the React app */}
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
-        {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
       </>
     </Suspense>
   );
