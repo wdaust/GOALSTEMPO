@@ -67,7 +67,7 @@ const Header = () => {
       <div className="flex items-center">
         <div className="flex items-center md:hidden">
           <img
-            src="https://www.dropbox.com/scl/fi/f0zm1lf8nj2oyu4d18uck/truthgoals-logo-light2-2x.png?rlkey=1674dqzppcx47327lip5kcoe4&dl=1"
+            src="/images/truthgoals-logo-light2@2x.png"
             alt="Truthgoals"
             className="h-8 w-auto"
           />

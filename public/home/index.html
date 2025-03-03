@@ -1,10 +1,676 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0;url=/index.html" />
-    <title>Redirecting to Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TruthGoals - Spiritual Goal & Habit Tracker</title>
+    <link rel="icon" type="image/svg+xml" href="/images/truthgoals-icon.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #5bc194;
+        --primary-dark: #4aa47c;
+      }
+      .bg-primary {
+        background-color: var(--primary);
+      }
+      .text-primary {
+        color: var(--primary);
+      }
+      .border-primary {
+        border-color: var(--primary);
+      }
+      .hover\:bg-primary-dark:hover {
+        background-color: var(--primary-dark);
+      }
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+    </style>
   </head>
-  <body>
-    <p>Redirecting to home page...</p>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <img
+            src="/images/truthgoals-logo-light2@2x.png"
+            alt="TruthGoals"
+            class="h-10"
+          />
+        </div>
+        <nav class="hidden md:flex space-x-8"></nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="/app/auth"
+            class="hidden md:inline-block text-gray-700 hover:text-primary font-medium"
+            >Sign In</a
+          >
+          <a
+            href="/app/auth"
+            class="bg-primary hover:bg-primary-dark text-white font-medium px-4 py-2 rounded-md transition duration-200"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-white">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+      >
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            Track Your Spiritual Growth Journey
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            TruthGoals helps you build consistent spiritual habits, set
+            meaningful goals, and grow in faith with accountability.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+          >
+            <a
+              href="/app/auth"
+              class="btn-primary px-8 py-3 rounded-md text-center font-medium text-lg"
+              >Start Your Journey</a
+            >
+            <a
+              href="#features"
+              class="border border-gray-300 hover:border-primary text-gray-700 hover:text-primary px-8 py-3 rounded-md text-center font-medium text-lg transition duration-200"
+              >Learn More</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img
+            src="/images/app-mock-angle.png"
+            alt="TruthGoals App"
+            class="rounded-lg mx-auto w-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Features Designed for Spiritual Growth
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Everything you need to build consistent spiritual habits and achieve
+            your goals.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Habit Tracking</h3>
+            <p class="text-gray-600">
+              Track your Bible reading, meeting attendance, and field service
+              with visual progress indicators.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Goal Setting</h3>
+            <p class="text-gray-600">
+              Create goals for pioneering, language learning, and scripture
+              memorization with step-by-step tracking.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Accountability</h3>
+            <p class="text-gray-600">
+              Connect with accountability partners to encourage each other in
+              your spiritual journey.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Bible Reading Tracker</h3>
+            <p class="text-gray-600">
+              Track your Bible reading progress with a visual chapter-by-chapter
+              tracker for the entire Bible.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Spiritual Journal</h3>
+            <p class="text-gray-600">
+              Record your spiritual thoughts, experiences, and reflections in a
+              private digital journal.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div
+              class="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-primary"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Progress Analytics</h3>
+            <p class="text-gray-600">
+              Visualize your spiritual growth with charts and statistics to
+              track your progress over time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Benefits of Using TruthGoals
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            How TruthGoals can help you grow spiritually and stay consistent.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div
+                class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Build Consistent Habits</h3>
+              <p class="text-gray-600">
+                Develop and maintain spiritual routines that become a natural
+                part of your daily life.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div
+                class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Stay Motivated</h3>
+              <p class="text-gray-600">
+                Visual progress tracking and achievement badges help you stay
+                motivated on your spiritual journey.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div
+                class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Strengthen Your Faith</h3>
+              <p class="text-gray-600">
+                Regular Bible reading and spiritual activities tracked in one
+                place help deepen your understanding and faith.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div
+                class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Achieve Spiritual Goals</h3>
+              <p class="text-gray-600">
+                Break down larger spiritual goals into manageable steps and
+                track your progress toward achieving them.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div
+                class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Mutual Encouragement</h3>
+              <p class="text-gray-600">
+                Connect with accountability partners who can encourage you and
+                help you stay on track.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div
+                class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Reflect on Your Journey</h3>
+              <p class="text-gray-600">
+                Use the spiritual journal to record insights, prayers, and
+                reflections on your spiritual growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            What Our Users Say
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Hear from people who have transformed their spiritual habits with
+            TruthGoals.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                  alt="User"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Sarah J.</h4>
+                <p class="text-sm text-gray-600">Using for 6 months</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "TruthGoals has helped me establish a consistent Bible reading
+              habit. I've read more scripture in the past 6 months than in the
+              previous 2 years!"
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                  alt="User"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Michael T.</h4>
+                <p class="text-sm text-gray-600">Using for 1 year</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "The accountability feature has been a game-changer for me. My
+              partner and I encourage each other daily, and it's made a huge
+              difference in my spiritual routine."
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                  alt="User"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Rebecca L.</h4>
+                <p class="text-sm text-gray-600">Using for 3 months</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "I love how I can track my spiritual goals and break them down
+              into manageable steps. It's helped me make progress on goals I've
+              had for years but never completed."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-primary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+          Ready to Start Your Spiritual Growth Journey?
+        </h2>
+        <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          Join thousands of others who are using TruthGoals to build consistent
+          spiritual habits and achieve their goals.
+        </p>
+        <a
+          href="/app/auth"
+          class="inline-block bg-white text-primary hover:bg-gray-100 font-bold px-8 py-4 rounded-md text-lg transition duration-200"
+          >Get Started for Free</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <img
+              src="/images/truthgoals-logo-dark2@2x.png"
+              alt="TruthGoals"
+              class="h-10 mb-4"
+            />
+            <p class="text-gray-400">
+              Track your spiritual habits, set meaningful goals, and grow in
+              faith.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#features"
+                  class="text-gray-400 hover:text-white transition duration-200"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#benefits"
+                  class="text-gray-400 hover:text-white transition duration-200"
+                  >Benefits</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white transition duration-200"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/app/auth"
+                  class="text-gray-400 hover:text-white transition duration-200"
+                  >Sign In</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Legal</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="/privacy-policy.html"
+                  class="text-gray-400 hover:text-white transition duration-200"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/terms-of-service.html"
+                  class="text-gray-400 hover:text-white transition duration-200"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Contact</h4>
+            <p class="text-gray-400 mb-2">Questions or feedback?</p>
+            <a
+              href="mailto:wdaust@gmail.com"
+              class="text-primary hover:text-white transition duration-200"
+              >wdaust@gmail.com</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 TruthGoals. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
