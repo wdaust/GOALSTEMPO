@@ -120,21 +120,9 @@ const HabitCard = ({
   const [isCompleted, setIsCompleted] = useState(lastCompleted === "Today");
   const isBreakHabit = type === "break-habit";
 
-  // Determine background color based on habit type
+  // Use light gray background for all habit types
   const getBgColor = () => {
-    switch (type) {
-      case "bible-reading":
-        return "bg-blue-50";
-      case "meeting-attendance":
-        return "bg-green-50";
-      case "field-service":
-        return "bg-amber-50";
-      case "break-habit":
-        return "bg-red-50";
-      case "custom":
-      default:
-        return "bg-purple-50";
-    }
+    return "bg-gray-100";
   };
 
   const handleComplete = () => {

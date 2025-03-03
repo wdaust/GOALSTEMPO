@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 154 37% 56%; /* #5BC194 */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -102,25 +102,31 @@
   border-color: hsl(var(--border));
 }
 
-/* Custom dark mode styles to match sleep app */
+/* Custom dark mode styles for Truthgoals */
 .dark {
   background-color: #000000;
 }
 
+.dark .bg-primary,
+.dark .text-primary {
+  background-color: #5bc194;
+  color: #ffffff;
+}
+
 .dark .bg-blue-500 {
-  background-color: #4285f4;
+  background-color: #5bc194;
 }
 
 .dark .text-blue-500 {
-  color: #4285f4;
+  color: #5bc194;
 }
 
 .dark .bg-green-500 {
-  background-color: #34a853;
+  background-color: #5bc194;
 }
 
 .dark .text-green-500 {
-  color: #34a853;
+  color: #5bc194;
 }
 
 .dark .bg-red-500 {
@@ -132,11 +138,11 @@
 }
 
 .dark .bg-orange-500 {
-  background-color: #fbbc05;
+  background-color: #5bc194;
 }
 
 .dark .text-orange-500 {
-  color: #fbbc05;
+  color: #5bc194;
 }
 
 .dark .bg-muted {
@@ -149,4 +155,19 @@
 
 .dark .bg-background {
   background-color: #000000;
+}
+
+/* Custom button styles for primary color */
+.btn-primary,
+.bg-primary {
+  background-color: #5bc194 !important;
+  color: white !important;
+}
+
+.text-primary {
+  color: #5bc194 !important;
+}
+
+.border-primary {
+  border-color: #5bc194 !important;
 }

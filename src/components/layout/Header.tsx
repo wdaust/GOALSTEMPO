@@ -65,7 +65,13 @@ const Header = () => {
   return (
     <header className="w-full h-16 bg-white border-b border-gray-200 flex items-center justify-between px-4 md:px-6">
       <div className="flex items-center">
-        <h1 className="text-xl font-bold text-primary">KHGoals</h1>
+        <div className="flex items-center md:hidden">
+          <img
+            src="https://www.dropbox.com/scl/fi/f0zm1lf8nj2oyu4d18uck/truthgoals-logo-light2-2x.png?rlkey=1674dqzppcx47327lip5kcoe4&dl=1"
+            alt="Truthgoals"
+            className="h-8 w-auto"
+          />
+        </div>
       </div>
 
       <div className="flex items-center space-x-2">

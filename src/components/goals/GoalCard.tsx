@@ -45,7 +45,7 @@ const GoalCard = ({
 
   return (
     <div
-      className="w-full rounded-lg bg-white p-4 shadow-sm cursor-pointer"
+      className="w-full rounded-lg bg-gray-100 p-4 shadow-sm cursor-pointer"
       onClick={onClick}
     >
       <div className="flex justify-between items-start mb-3">

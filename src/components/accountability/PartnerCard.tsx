@@ -29,7 +29,7 @@ const PartnerCard = ({
   onViewDetails = () => {},
 }: PartnerCardProps) => {
   return (
-    <div className="w-full rounded-lg bg-white p-4 shadow-sm">
+    <div className="w-full rounded-lg bg-gray-100 p-4 shadow-sm">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center space-x-3">
           <Avatar className="h-10 w-10">

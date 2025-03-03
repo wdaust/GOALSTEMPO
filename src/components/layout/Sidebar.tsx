@@ -52,7 +52,13 @@ const Sidebar = ({ className }: SidebarProps) => {
     >
       <div className="space-y-4 flex-1">
         <div className="py-2">
-          <h2 className="mb-2 px-4 text-lg font-semibold">KHGoals</h2>
+          <div className="flex items-center mb-4 px-4">
+            <img
+              src="https://www.dropbox.com/scl/fi/f0zm1lf8nj2oyu4d18uck/truthgoals-logo-light2-2x.png?rlkey=1674dqzppcx47327lip5kcoe4&dl=1"
+              alt="Truthgoals"
+              className="h-8 w-auto"
+            />
+          </div>
           <div className="space-y-1">
             <SidebarItem
               icon={<Home className="h-4 w-4" />}
@@ -108,7 +114,7 @@ const Sidebar = ({ className }: SidebarProps) => {
         </div>
       </div>
       <div className="mt-auto">
-        <div className="rounded-lg bg-blue-50 p-3">
+        <div className="rounded-lg bg-[#5BC194]/10 p-3">
           <h3 className="text-sm font-medium">Daily Scripture</h3>
           <p className="text-xs mt-1 text-muted-foreground">
             "For God is not unrighteous so as to forget your work and the love

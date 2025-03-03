@@ -68,10 +68,19 @@ const RegisterForm = ({ onSuccess, onLoginClick }: RegisterFormProps) => {
   return (
     <div className="w-full max-w-md space-y-6 p-6 bg-white rounded-lg shadow-md">
       <div className="text-center">
-        <h1 className="text-2xl font-bold">Create an Account</h1>
-        <p className="text-sm text-muted-foreground mt-2">
-          Join KHGoals to track your spiritual habits and goals
-        </p>
+        <div className="flex flex-col items-center">
+          <div className="flex items-center mb-2">
+            <img
+              src="https://www.dropbox.com/scl/fi/f0zm1lf8nj2oyu4d18uck/truthgoals-logo-light2-2x.png?rlkey=1674dqzppcx47327lip5kcoe4&dl=1"
+              alt="Truthgoals"
+              className="h-10 w-auto mr-2"
+            />
+          </div>
+          <h1 className="text-2xl font-bold">Create an Account</h1>
+          <p className="text-sm text-muted-foreground mt-2">
+            Join Truthgoals to track your spiritual habits and goals
+          </p>
+        </div>
       </div>
 
       {error && (

@@ -25,7 +25,7 @@ const JournalEntryCard = ({
 
   return (
     <div
-      className="w-full bg-white rounded-lg p-4 shadow-sm cursor-pointer"
+      className="w-full bg-gray-100 rounded-lg p-4 shadow-sm cursor-pointer"
       onClick={onClick}
     >
       <div className="flex justify-between items-start mb-2">

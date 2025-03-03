@@ -61,28 +61,34 @@ const AuthPage = () => {
           />
         )}
       </div>
-      <div className="hidden lg:block lg:w-1/2 bg-blue-600">
+      <div className="hidden lg:block lg:w-1/2 bg-black">
         <div className="h-full flex flex-col justify-center items-center p-12 text-white">
-          <h1 className="text-4xl font-bold mb-6">KHGoals</h1>
+          <div className="flex flex-col items-center mb-6">
+            <img
+              src="https://www.dropbox.com/scl/fi/f0zm1lf8nj2oyu4d18uck/truthgoals-logo-light2-2x.png?rlkey=1674dqzppcx47327lip5kcoe4&dl=1"
+              alt="Truthgoals"
+              className="h-16 w-auto mb-4"
+            />
+          </div>
           <p className="text-xl mb-8 text-center">
             Track your spiritual habits, set meaningful goals, and grow in faith
           </p>
           <div className="space-y-4 max-w-md">
-            <div className="bg-blue-500 p-4 rounded-lg">
+            <div className="bg-[#5BC194] p-4 rounded-lg">
               <h3 className="font-medium mb-2">Track Spiritual Habits</h3>
               <p className="text-sm opacity-90">
                 Monitor your Bible reading, meeting attendance, and field
                 service with visual progress indicators.
               </p>
             </div>
-            <div className="bg-blue-500 p-4 rounded-lg">
+            <div className="bg-[#5BC194] p-4 rounded-lg">
               <h3 className="font-medium mb-2">Set Meaningful Goals</h3>
               <p className="text-sm opacity-90">
                 Create goals for pioneering, language learning, and scripture
                 memorization with step-by-step tracking.
               </p>
             </div>
-            <div className="bg-blue-500 p-4 rounded-lg">
+            <div className="bg-[#5BC194] p-4 rounded-lg">
               <h3 className="font-medium mb-2">Stay Accountable</h3>
               <p className="text-sm opacity-90">
                 Connect with accountability partners to encourage each other in

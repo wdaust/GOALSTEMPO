@@ -104,7 +104,7 @@ const DashboardSummary = () => {
     <div className="w-full bg-white p-4 rounded-lg shadow-sm">
       <h2 className="text-xl font-semibold mb-6">Spiritual Progress</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-blue-50 p-4 rounded-lg">
+        <div className="bg-gray-100 p-4 rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-medium">Habits</h3>
             <CheckCircle className="h-5 w-5 text-blue-500" />
@@ -120,7 +120,7 @@ const DashboardSummary = () => {
           </div>
         </div>
 
-        <div className="bg-green-50 p-4 rounded-lg">
+        <div className="bg-gray-100 p-4 rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-medium">Goals</h3>
             <Target className="h-5 w-5 text-green-500" />
@@ -136,7 +136,7 @@ const DashboardSummary = () => {
           </div>
         </div>
 
-        <div className="bg-amber-50 p-4 rounded-lg">
+        <div className="bg-gray-100 p-4 rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-medium">Current Streak</h3>
             <BookOpen className="h-5 w-5 text-amber-500" />
@@ -153,7 +153,7 @@ const DashboardSummary = () => {
           </div>
         </div>
 
-        <div className="bg-purple-50 p-4 rounded-lg">
+        <div className="bg-gray-100 p-4 rounded-lg">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-sm font-medium">Next Meeting</h3>
             <Calendar className="h-5 w-5 text-purple-500" />
